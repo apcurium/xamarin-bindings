@@ -1,6 +1,8 @@
 # xamarin-bindings
 
-Put list of bindings here
+Braintree.iOS
+Braintree.Api.Droid
+Braintree.Dropin.Droid
 
 # License
 

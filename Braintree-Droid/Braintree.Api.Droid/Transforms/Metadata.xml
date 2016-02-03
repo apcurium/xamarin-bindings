@@ -1,0 +1,27 @@
+﻿<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr path="/api/package[@name='com.devicecollector']" name="managedName">Braintree.Device_Collector</attr>
+  <attr path="/api/package[@name='com.devicecollector.collectors']" name="managedName">Braintree.Device_Collector.Collectors</attr>
+  <attr path="/api/package[@name='com.devicecollector.util']" name="managedName">Braintree.Device_Collector.Util</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api']" name="managedName">Braintree.Api</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.annotations']" name="managedName">Braintree.Api.Annotations</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.data_collector']" name="managedName">Braintree.Api.Data_Collector</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.exceptions']" name="managedName">Braintree.Api.Exceptions</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.interfaces']" name="managedName">Braintree.Api.Interfaces</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.internal']" name="managedName">Braintree.Api.Internal</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.models']" name="managedName">Braintree.Api.Models</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.threedsecure']" name="managedName">Braintree.Api.Threedsecure</attr>
+  <attr path="/api/package[@name='com.braintreepayments.cardform']" name="managedName">Braintree.Cardform</attr>
+  <attr path="/api/package[@name='com.braintreepayments.cardform.utils']" name="managedName">Braintree.Cardform.Utils</attr>
+  <attr path="/api/package[@name='com.braintreepayments.cardform.view']" name="managedName">Braintree.Cardform.View</attr>
+  <attr path="/api/package[@name='com.paypal.android.sdk.onetouch.core']" name="managedName">Braintree.Paypal</attr>
+  
+  <remove-node path="/api/package[@name='com.paypal.android.sdk.onetouch.core']/class[@name='Request']/method[@name='a']" />
+  <remove-node path="/api/package[@name='com.braintreepayments.cardform.view']/class[@name='ErrorEditText']/method[@name='isError' and count(parameter)=0]" />
+</metadata>

@@ -1,0 +1,20 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr path="/api/package[@name='com.braintreepayments.api']" name="managedName">Braintree.Api</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.dropin']" name="managedName">Braintree.Api.Dropin</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.dropin.adapters']" name="managedName">Braintree.Api.Dropin.Adapters</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.dropin.utils']" name="managedName">Braintree.Api.Dropin.Utils</attr>
+  <attr path="/api/package[@name='com.braintreepayments.api.dropin.view']" name="managedName">Braintree.Api.Dropin.View</attr>
+<!--  
+  <attr path="/api/package[@name='com.braintreepayments.cardform.utils']" name="managedName">Braintree.Cardform.Utils</attr>
+  <attr path="/api/package[@name='com.braintreepayments.cardform.view']" name="managedName">Braintree.Cardform.View</attr>
+-->
+
+  <remove-node path="/api/package[@name='com.braintreepayments.api']/class[@name='PaymentRequest']/method[@name='androidPayCart']" />
+</metadata>
