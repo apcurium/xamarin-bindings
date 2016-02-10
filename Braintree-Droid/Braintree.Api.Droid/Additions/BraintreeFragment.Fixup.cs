@@ -11,28 +11,16 @@ namespace Braintree.Api
 {
     public partial class BraintreeFragment
     {
-        /// <summary>
-        /// This method generates a listener for PaymentMethodNonceCreated, Cancel and Error events and returns a result or an error dependent on 
-        /// what the system answer.
-        /// </summary>
-        /// <remarks>
-        ///     This method will throw TaskCancelException if Cancel event occurs in brantree.
-        /// 
-        ///     This method will remove the listener when it's done with the screen.
-        /// </remarks>
-        /// <returns>
-        ///     A paymetnMethodNonce object wrapped in a Task containing the payment method nonce to be used by the server.
-        /// </returns>
-        public async Task<PaymentMethodNonce> GetPaymentMethodNonceTask()
+        public async Task<PaymentMethodNonce> TokenizeAsync(CardBuilder card)
         {
-            var actionListener = new BraintreeFragmentPaymentMethodNonceListener();
+            var actionListener = new PaymentMethodNonceListener();
             try
             {
                 AddListener(actionListener);
 
-                var result = await actionListener.Task();
+                Card.Tokenize(this, card);
 
-                return result;
+                return await actionListener.Task();
             }
             // There is no catch statements here. Exception handling must be done by caller.
             finally
@@ -41,11 +29,54 @@ namespace Braintree.Api
             }
         }
 
-        private class BraintreeFragmentPaymentMethodNonceListener : JObject, IPaymentMethodNonceCreatedListener, IBraintreeCancelListener, IBraintreeErrorListener
+        public async Task<PaymentMethodNonce> GetPaymentNonceAsync()
+        {
+            var actionListener = new PaymentMethodNonceListener();
+            try
+            {
+                AddListener(actionListener);
+
+                return await actionListener.Task();
+            }
+            // There is no catch statements here. Exception handling must be done by caller.
+            finally
+            {
+                RemoveListener(actionListener);
+            }
+        }
+
+        public async Task<PaymentMethodNonce> AuthorizePaypalPaymentAsync(bool requestBillingAgreement, string[] additionalParameters = null, PayPalRequest request = null)
+        {
+            var actionListener = new PaymentMethodNonceListener();
+            try
+            {
+                AddListener(actionListener);
+
+                PayPal.AuthorizeAccount(this, additionalParameters);
+
+                if (requestBillingAgreement)
+                {
+                    PayPal.RequestBillingAgreement(this, request??new PayPalRequest());
+                }
+
+                return await actionListener.Task();
+            }
+            finally
+            {
+                RemoveListener(actionListener);
+            }
+        }
+
+        private class PaymentMethodNonceListener : JObject, IPaymentMethodNonceCreatedListener, IBraintreeCancelListener, IBraintreeErrorListener
         {
             private readonly TaskCompletionSource<PaymentMethodNonce> _paymentMethodNonce;
 
-            public BraintreeFragmentPaymentMethodNonceListener()
+            public bool IsCompleted
+            {
+                get { return _paymentMethodNonce.Task.IsCompleted; }
+            }
+
+            public PaymentMethodNonceListener()
             {
                 _paymentMethodNonce = new TaskCompletionSource<PaymentMethodNonce>();
             }
