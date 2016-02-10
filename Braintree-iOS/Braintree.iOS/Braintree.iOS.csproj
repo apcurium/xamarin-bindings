@@ -50,7 +50,7 @@
       <DependentUpon>libDeviceCollectorLibrary.a</DependentUpon>
     </Compile>
     <Compile Include="Fixups\BTPayPalDriver.FixUp.cs" />
-    <Compile Include="Fixups\BTCardClient.cs" />
+    <Compile Include="Fixups\BTCardClient.FixUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
