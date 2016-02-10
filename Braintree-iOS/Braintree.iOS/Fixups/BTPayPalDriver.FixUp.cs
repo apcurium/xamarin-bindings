@@ -9,9 +9,9 @@ namespace Braintree
 	public partial class BTPayPalDriver
 	{
 
-		public Task<string> AuthorizeAccountWithAdditionalScopesAsync(string[] payload)
+		public Task<BTPaymentMethodNonce> AuthorizeAccountWithAdditionalScopesAsync(string[] payload)
 		{
-			var tcs = new TaskCompletionSource<string>();
+			var tcs = new TaskCompletionSource<BTPaymentMethodNonce>();
 
 			var paypalScope = new NSSet<NSString>(payload.Select(p => new NSString(p)).ToArray());
 
@@ -26,7 +26,7 @@ namespace Braintree
 						return;
 					}
 
-					tcs.TrySetResult(((BTPaymentMethodNonce)paypalNonce).Nonce);
+					tcs.TrySetResult((BTPaymentMethodNonce)paypalNonce);
 				});
 					
 
@@ -34,9 +34,9 @@ namespace Braintree
 		}
 
 
-		public Task<string> AuthorizeAccountWithCompletion()
+		public Task<BTPaymentMethodNonce> AuthorizeAccountWithCompletion()
 		{
-			var tcs = new TaskCompletionSource<string>();
+			var tcs = new TaskCompletionSource<BTPaymentMethodNonce>();
 
 			AuthorizeAccountWithCompletion((paypalNonce, error) =>
 				{
@@ -49,7 +49,7 @@ namespace Braintree
 						return;
 					}
 
-					tcs.TrySetResult(((BTPaymentMethodNonce)paypalNonce).Nonce);
+					tcs.TrySetResult((BTPaymentMethodNonce)paypalNonce);
 				});
 
 			return tcs.Task;

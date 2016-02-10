@@ -6,9 +6,9 @@ namespace Braintree
 {
 	public partial class BTCardClient
 	{
-		public Task<string> TokenizeCardAsync(BTCard card)
+		public Task<BTPaymentMethodNonce> TokenizeCardAsync(BTCard card)
 		{
-			var tcs = new TaskCompletionSource<string>();
+			var tcs = new TaskCompletionSource<BTPaymentMethodNonce>();
 
 			TokenizeCard(card, (nonce, error) =>
 				{
@@ -19,7 +19,7 @@ namespace Braintree
 						tcs.TrySetException(exception);
 					}
 
-					tcs.TrySetResult(((BTPaymentMethodNonce)nonce).Nonce);
+					tcs.TrySetResult((BTPaymentMethodNonce)nonce);
 				});
 			return tcs.Task;
 		}
