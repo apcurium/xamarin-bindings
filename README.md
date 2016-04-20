@@ -1,8 +1,11 @@
-# xamarin-bindings
+# Xamarin bindings
 
-Braintree.iOS  
-Braintree.Api.Droid  
-Braintree.Dropin.Droid  
+## Braintree v.zero iOS and Android SDKs
+
+Documentation for [iOS](https://developers.braintreepayments.com/start/hello-client/ios/v4)  
+Documentation for [Android](https://developers.braintreepayments.com/start/hello-client/android/v2)
+
+
 
 # License
 
