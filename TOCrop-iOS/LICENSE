@@ -1,30 +1,6 @@
-# Xamarin bindings
-
-## Braintree v.zero iOS and Android SDKs
-
-Documentation for [iOS](https://developers.braintreepayments.com/start/hello-client/ios/v4)  
-Documentation for [Android](https://developers.braintreepayments.com/start/hello-client/android/v2)
-
-## TOCropViewController iOS
-A view controller that allows users to crop UIImage objects.
-
-TOCropViewController [GitHub](https://github.com/TimOliver/TOCropViewController)
-
-###Sample
-```cs
-var image = UIImage.FromFile(fileString);
-
-var viewController = new TOCrop.TOCropViewController(image);
-var rootViewController = UIApplication.SharedApplication.Delegate.GetWindow().RootViewController;
-
-return viewController.ShowCropViewAsync(rootViewController, true, null);
-```
-
-# License
-
 The MIT License (MIT)
 
-Copyright (c) 2016 Apcurium Group Inc
+Copyright (c) 2015-2016 Tim Oliver
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
