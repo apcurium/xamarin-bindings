@@ -14,14 +14,10 @@ TOCropViewController [GitHub](https://github.com/TimOliver/TOCropViewController)
 ```cs
 var image = UIImage.FromFile(fileString);
 
-var viewControllerDelegate = new CropViewControllerDelegate();
-var viewController = new TOCropViewController(image);
-viewController.Delegate = viewControllerDelegate;
+var viewController = new TOCrop.TOCropViewController(image);
+var rootViewController = UIApplication.SharedApplication.Delegate.GetWindow().RootViewController;
 
-var currentWindow = UIApplication.SharedApplication.Delegate.GetWindow();
-currentWindow.RootViewController.PresentViewController(viewController, true, null);
-
-return viewControllerDelegate.GetResult();
+return viewController.ShowCropViewAsync(rootViewController, true, null);
 ```
 
 # License
