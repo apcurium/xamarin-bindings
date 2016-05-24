@@ -43,6 +43,7 @@
       <DependentUpon>libTOCropViewController.a</DependentUpon>
     </Compile>
     <Compile Include="CropViewControllerDelegate.cs" />
+    <Compile Include="TOCropViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

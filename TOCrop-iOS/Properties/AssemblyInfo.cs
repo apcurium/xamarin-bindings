@@ -15,9 +15,9 @@ using Foundation;
 [assembly: AssemblyTitle("TOCrop")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Apcurium")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("erwan.jezequel")]
+[assembly: AssemblyCopyright("Copyright © 2016 Apcurium")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -6,6 +6,8 @@ Documentation for [iOS](https://developers.braintreepayments.com/start/hello-cli
 Documentation for [Android](https://developers.braintreepayments.com/start/hello-client/android/v2)
 
 ## TOCropViewController iOS
+A view controller that allows users to crop UIImage objects.
+
 TOCropViewController [GitHub](https://github.com/TimOliver/TOCropViewController)
 
 ###Sample
