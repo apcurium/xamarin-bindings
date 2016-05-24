@@ -9,16 +9,18 @@ Documentation for [Android](https://developers.braintreepayments.com/start/hello
 TOCropViewController [GitHub](https://github.com/TimOliver/TOCropViewController)
 
 ###Sample
-``var image = UIImage.FromFile(fileString);
+```cs
+var image = UIImage.FromFile(fileString);
 
-	var viewControllerDelegate = new CropViewControllerDelegate();
-	var viewController = new TOCropViewController(image);
-	viewController.Delegate = viewControllerDelegate;
+var viewControllerDelegate = new CropViewControllerDelegate();
+var viewController = new TOCropViewController(image);
+viewController.Delegate = viewControllerDelegate;
 
-	var currentWindow = UIApplication.SharedApplication.Delegate.GetWindow();
-	currentWindow.RootViewController.PresentViewController(viewController, true, null);
+var currentWindow = UIApplication.SharedApplication.Delegate.GetWindow();
+currentWindow.RootViewController.PresentViewController(viewController, true, null);
 
-	return viewControllerDelegate.GetResult();``
+return viewControllerDelegate.GetResult();
+```
 
 # License
 
