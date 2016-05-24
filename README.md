@@ -9,8 +9,7 @@ Documentation for [Android](https://developers.braintreepayments.com/start/hello
 TOCropViewController [GitHub](https://github.com/TimOliver/TOCropViewController)
 
 ###Sample
-``
-	var image = UIImage.FromFile(fileString);
+``var image = UIImage.FromFile(fileString);
 
 	var viewControllerDelegate = new CropViewControllerDelegate();
 	var viewController = new TOCropViewController(image);
@@ -19,8 +18,7 @@ TOCropViewController [GitHub](https://github.com/TimOliver/TOCropViewController)
 	var currentWindow = UIApplication.SharedApplication.Delegate.GetWindow();
 	currentWindow.RootViewController.PresentViewController(viewController, true, null);
 
-	return viewControllerDelegate.GetResult();
-``
+	return viewControllerDelegate.GetResult();``
 
 # License
 
