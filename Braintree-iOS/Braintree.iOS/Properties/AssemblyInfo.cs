@@ -17,7 +17,7 @@ using Foundation;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("dominiquesavoie")]
+[assembly: AssemblyCopyright("Copyright © 2015 Apcurium")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
