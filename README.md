@@ -16,8 +16,14 @@ var image = UIImage.FromFile(fileString);
 
 var viewController = new TOCrop.TOCropViewController(image);
 var rootViewController = UIApplication.SharedApplication.Delegate.GetWindow().RootViewController;
-
-return viewController.ShowCropViewAsync(rootViewController, true, null);
+try
+{
+  var imageBytes = viewController.ShowCropViewAsync(rootViewController, true, null);
+}
+catch(TaskCancelException)
+{
+  // User cancelled the operation
+}
 ```
 
 # License
