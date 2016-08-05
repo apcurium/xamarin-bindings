@@ -8,7 +8,8 @@ Documentation for [Android](https://developers.braintreepayments.com/start/hello
 ## Square Register iOS and Android SDKs
 
 Documentation for [iOS](https://docs.connect.squareup.com/articles/register-api-ios/)  
-Documentation for [Android](https://docs.connect.squareup.com/articles/register-api-android/)  
+Documentation for [Android](https://docs.connect.squareup.com/articles/register-api-android/)   
+Check both SDKs GitHub page for more information on how to make the samples work ([iOS](https://github.com/square/SquareRegisterSDK-iOS) [Android](https://github.com/square/register-android-sdk))
 
 ### To create the iOS binding:  
 1. Download the code from [GitHub](https://github.com/square/SquareRegisterSDK-iOS)  
