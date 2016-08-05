@@ -62,9 +62,9 @@ namespace SquareRegisterSDK.TestApp
                                                                false,
                                                                out error);
 
-            // Perform the request.
+            // Perform the request. (Strangely, it seems to return false even when error is null and that the Register app gets started...)
             var success = SCCAPIConnection.PerformRequest(request, out error);
-            if(!success)
+            if(!success && error != null)
             {
                 var alertView = new UIAlertView("Register app installed?",
                                                 "Make sure the register app is installed in the simulator. Log in as the merchant with token 7074ME2C077ZB.",
