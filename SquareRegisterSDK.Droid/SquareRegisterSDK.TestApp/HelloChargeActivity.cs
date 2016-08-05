@@ -54,7 +54,6 @@ namespace SquareRegisterSDK.TestApp
             _requestMetadataEditText = FindViewById<EditText>(Resource.Id.request_metadata_edit_text);
 
             FindViewById<Button>(Resource.Id.oauth_button).Click += (sender, e) => StartOAuth();
-
             FindViewById<FloatingActionButton>(Resource.Id.start_transaction_button).Click += (sender, e) => StartTransaction();
 
             _registerClient = RegisterSdk.CreateClient(this, ClientId);
