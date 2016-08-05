@@ -119,7 +119,7 @@ namespace SquareRegisterSDK.TestApp
                 var chargeIntent = _registerClient.CreateChargeIntent(chargeRequest);
                 StartActivityForResult(chargeIntent, ChargeRequestCode);
             }
-            catch(ActivityNotFoundException ex)
+            catch(ActivityNotFoundException)
             {
                 ShowSnackbar("Square Register was just uninstalled.");
             }
