@@ -26,7 +26,7 @@ namespace SquareRegisterSDK.TestApp
             this.Window.MakeKeyAndVisible();
 
             // Always set the client ID before creating your first API request.
-            SCCAPIRequest.SetClientID("sq0idp-PsHIrKY8YjBCFHF-hL7qpA");
+            SCCAPIRequest.SetClientID("YOUR_CLIENT_ID");
 
             // Replace with your app's callback URL.
             var callbackURL = new NSUrl("register-sdk-testapp://myCallback");
