@@ -33,7 +33,7 @@ namespace SquareRegisterSDK.TestApp
 
             // Specify the amount of money to charge.
             NSError error;
-            var amount = SCCMoney.MoneyWithAmountCents(100, "CAD", out error);
+            var amount = SCCMoney.MoneyWithAmountCents(100, "USD", out error);
 
             // Specify which forms of tender the merchant can accept
             var supportedTenderTypes = SCCAPIRequestTenderTypes.Card;
