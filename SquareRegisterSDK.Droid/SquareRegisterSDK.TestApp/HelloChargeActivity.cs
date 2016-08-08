@@ -106,7 +106,7 @@ namespace SquareRegisterSDK.TestApp
                 : int.Parse(timeoutString);
             var requestMetadata = _requestMetadataEditText.Text;
 
-            var chargeRequest = new ChargeRequest.Builder(amount, CurrencyCode.ValueOf(currencyCode))
+            var chargeRequest = new ChargeRequest.Builder(amount, CurrencyCode.ValueOf(currencyCode.ToUpper()))
                  .Note(note)
                  .EnforceBusinessLocation(locationId)
                  .AutoReturn(timeout, TimeUnit.Milliseconds)
