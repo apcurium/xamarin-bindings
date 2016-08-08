@@ -94,7 +94,10 @@ namespace SquareRegisterSDK.TestApp
             if(response.SuccessResponse)
             {
                 title = "Success!";
-                message = string.Format("Payment creation succeeded with payment ids {0} {1}, transaction ID {2}", response.PaymentID, response.OfflinePaymentID, response.TransactionID);
+                // Square says the PaymentId and OfflinePaymentId are deprecated and to use TransactionId and ClientTransactionId (which doesn't exist)
+                // http://stackoverflow.com/questions/37756795/why-do-ios-and-android-versions-of-the-square-register-sdk-return-different-valu
+                message = string.Format("Payment creation succeeded with payment ids {0} {1}, transaction ID {2}", 
+                                        response.PaymentID, response.OfflinePaymentID, response.TransactionID);
             }
             else
             {
