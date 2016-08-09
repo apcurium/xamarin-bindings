@@ -46,6 +46,7 @@ namespace SquareRegisterSDK.TestApp
             string merchantID = null;
 
             // Replace with any string you want returned from Square Register.
+            // also known as the "state" in Square iOS documentation
             var userInfoString = "Useful information";
 
             // Replace with notes to associate with the transaction.
@@ -94,10 +95,13 @@ namespace SquareRegisterSDK.TestApp
             if(response.SuccessResponse)
             {
                 title = "Success!";
-                // Square says the PaymentId and OfflinePaymentId are deprecated and to use TransactionId and ClientTransactionId (which doesn't exist)
+                // Square says the PaymentId and OfflinePaymentId are deprecated and to use TransactionId 
+                // and ClientTransactionId (which is missing from SCCAPIResponse) so I added it by parsing the url like they do
                 // http://stackoverflow.com/questions/37756795/why-do-ios-and-android-versions-of-the-square-register-sdk-return-different-valu
-                message = string.Format("Payment creation succeeded with payment ids {0} {1}, transaction ID {2}", 
-                                        response.PaymentID, response.OfflinePaymentID, response.TransactionID);
+                var clientTransactionId = url.GetClientTransactionId(out decodeError);
+
+                message = string.Format("Payment creation succeeded with payment ids {0} {1}, transaction id {2}, client transaction id {3}", 
+                                        response.PaymentID, response.OfflinePaymentID, response.TransactionID, clientTransactionId);
             }
             else
             {
