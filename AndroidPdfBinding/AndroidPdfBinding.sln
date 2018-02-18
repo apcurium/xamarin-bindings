@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidPdfBinding.Viewer", "AndroidPdfBinding.Viewer\AndroidPdfBinding.Viewer.csproj", "{17DEA056-F768-4359-A59D-843BB7C285B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidPdfBinding.Lib", "AndroidPdfBinding.Lib\AndroidPdfBinding.Lib.csproj", "{271BF06C-A1D9-430C-B849-86D654ADD541}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17DEA056-F768-4359-A59D-843BB7C285B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DEA056-F768-4359-A59D-843BB7C285B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DEA056-F768-4359-A59D-843BB7C285B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DEA056-F768-4359-A59D-843BB7C285B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271BF06C-A1D9-430C-B849-86D654ADD541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271BF06C-A1D9-430C-B849-86D654ADD541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271BF06C-A1D9-430C-B849-86D654ADD541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271BF06C-A1D9-430C-B849-86D654ADD541}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

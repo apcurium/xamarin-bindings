@@ -1,9 +1,17 @@
 # Xamarin bindings
 
+
+## PDF view for Android
+
+View local pdf files.
+2 binding projects, One for the viewer and the other one is the PdfiumAndroid library
+Documentation for [Android Viewer](https://github.com/barteksc/AndroidPdfViewer)
+Documentation for [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid)
+
 ## Braintree v.zero iOS and Android SDKs
 
 Documentation for [iOS](https://developers.braintreepayments.com/start/hello-client/ios/v4)  
-Documentation for [Android](https://developers.braintreepayments.com/start/hello-client/android/v2)
+Documentation for [Android](https://developers.braintreepayments.com/start/hello-client/android/v2)    
 
 ## Square Register iOS and Android SDKs
 
